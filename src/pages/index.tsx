@@ -7,7 +7,9 @@ const Home = () => {
         eius hic ipsam nostrum omnis optio! Doloribus quaerat quis ratione? At, maiores voluptas?
         Eveniet odio omnis repellendus sapiente voluptatibus.
       </p>
-      <button className="btn-blue">Start!!</button>
+      <a href="./about">
+        <button className="btn-blue">About Page</button>
+      </a>
     </section>
   );
 };
