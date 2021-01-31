@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Icon from '../atoms/icon';
 
-function SNSButtons() {
+const SNSButtons = () => {
   return (
     <aside className="bg-gray-600 flex h-full items-center text-center w-16">
       <ul className="flex flex-col h-1/3 justify-around">
@@ -29,6 +29,6 @@ function SNSButtons() {
       </ul>
     </aside>
   );
-}
+};
 
 export default SNSButtons;
