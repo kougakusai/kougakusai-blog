@@ -3,13 +3,13 @@ import Image from 'next/image';
 const Icon = (props) => {
   return (
     <a
-      title={props.text}
-      href={props.url}
+      className="flex justify-around h-full w-full"
+      title={props.name.text}
+      href={props.name.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="rounded-full"
     >
-      <img src={props.src} alt={props.text} className="rounded-full" />
+      <img src={props.name.img} alt={props.name.text} />
     </a>
   );
 };
