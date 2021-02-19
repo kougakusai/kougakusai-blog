@@ -17,9 +17,9 @@ const Twitter = {
     url: 'https://www.instagram.com/kougakusai2020/',
   };
 
-const SNSButtons = () => {
+export default function SNSButtons() {
   return (
-    <ul className="flex lg:flex-col flex-row lg:h-1/3 h-9/10 content-center justify-center text-center lg:w-full w-1/3">
+    <ul className="flex md:flex-col flex-row h-56 justify-around w-full">
       <li>
         <Icon name={Twitter} />
       </li>
@@ -31,6 +31,4 @@ const SNSButtons = () => {
       </li>
     </ul>
   );
-};
-
-export default SNSButtons;
+}

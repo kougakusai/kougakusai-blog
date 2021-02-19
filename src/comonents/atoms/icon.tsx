@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-const Icon = (props) => {
+export default function Icon(props) {
   return (
     <a
       className="flex justify-around h-full w-full"
@@ -9,9 +9,7 @@ const Icon = (props) => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <img src={props.name.img} alt={props.name.text} />
+      <img src={props.name.img} alt={props.name.text} width="56px" />
     </a>
   );
-};
-
-export default Icon;
+}
