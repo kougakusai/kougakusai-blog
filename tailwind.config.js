@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 const colors = require('tailwindcss/colors');
 
+=======
+>>>>>>> saito
 module.exports = {
   purge: ['./src/components/**/*.tsx', './src/pages/**/*.tsx'],
   darkMode: false, // or 'media' or 'class'
   theme: {
+<<<<<<< HEAD
     extend: {
       colors: {
         k: {
@@ -23,3 +27,25 @@ module.exports = {
   },
   plugins: [],
 };
+=======
+    extend: {},
+  },
+  variants: {
+    /* extend: {}, */
+  },
+  plugins: [],
+  corePlugins: {
+    preflight: false,
+  },
+};
+/* module.exports = {
+  theme: {
+    extend: {},
+  },
+  variants: {},
+  plugins: [],
+  corePlugins: {
+    preflight: false,
+  },
+}; */
+>>>>>>> saito
