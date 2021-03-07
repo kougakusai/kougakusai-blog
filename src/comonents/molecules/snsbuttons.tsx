@@ -19,14 +19,14 @@ const Twitter = {
 
 export default function SNSButtons() {
   return (
-    <ul className="flex md:flex-col flex-row h-56 justify-around w-full">
-      <li>
+    <ul className="flex md:flex-col flex-row h-56 justify-around list-none w-full">
+      <li className="list-none">
         <Icon name={Twitter} />
       </li>
-      <li>
+      <li className="list-none">
         <Icon name={Youtube} />
       </li>
-      <li>
+      <li className="list-none">
         <Icon name={Instagram} />
       </li>
     </ul>
