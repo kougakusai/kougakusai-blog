@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-module.exports = {
-  plugins: [
-    'tailwindcss',
-    'postcss-preset-env'
-  ]
-}
-=======
 const purgecss = [
   '@fullhuman/postcss-purgecss',
   {
@@ -22,4 +14,3 @@ module.exports = {
     ...(process.env.NODE_ENV === 'production' ? [purgecss] : []),
   ],
 };
->>>>>>> saito
