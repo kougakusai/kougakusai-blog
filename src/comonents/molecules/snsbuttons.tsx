@@ -3,17 +3,17 @@ import Icon from '../atoms/icon';
 
 const Twitter = {
     text: 'こうがく祭公式Twitterアカウント',
-    img: './img/twitter.svg',
+    img: '/img/twitter.svg',
     url: 'https://twitter.com/2020kougakusai',
   },
   Youtube = {
     text: 'こうがく祭公式Youtube Channel',
-    img: './img/youtube.svg',
+    img: '/img/youtube.svg',
     url: 'https://www.youtube.com/channel/UC8yEgipIcHHSkRlTLcm4tBw/',
   },
   Instagram = {
     text: 'こうがく祭公式Instagramアカウント',
-    img: './img/instagram.svg',
+    img: '/img/instagram.svg',
     url: 'https://www.instagram.com/kougakusai2020/',
   };
 
