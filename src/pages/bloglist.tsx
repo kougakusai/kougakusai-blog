@@ -17,7 +17,7 @@ export default function Hom({ posts }) {
           <Image src="/img/titleDeco.svg" height={50} width={50} className="inline-block" />
           <h2 className="ml-2 m-0 inline-block">記事一覧</h2>
         </div>
-        <hr></hr>
+        <hr className="mb-2"></hr>
         {posts.map(({ frontmatter: { title, description, updatedAt }, slug }) => (
           <article key={slug}>
             <div className="flex flex-row">
@@ -38,7 +38,7 @@ export default function Hom({ posts }) {
               </div>
               <div className="height-8 width-8 ml-8 border-k-darkgray border-t-4 border"></div>
             </div>
-            <hr></hr>
+            <hr className="mb-2"></hr>
           </article>
         ))}
       </Layout>
