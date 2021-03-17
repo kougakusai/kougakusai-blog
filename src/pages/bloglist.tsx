@@ -36,7 +36,6 @@ export default function Hom({ posts }) {
                   <p className="ml-8 m-0 text-k-pink">{description}</p>
                 </section>
               </div>
-              <div className="height-8 width-8 ml-8 border-k-darkgray border-t-4 border"></div>
             </div>
             <hr className="mb-2"></hr>
           </article>
