@@ -5,7 +5,13 @@ const withMDX = require('@next/mdx')({
 module.exports = withMDX({
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
 });
+module.exports = {
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/PROJECT_NAME' : '',
 
+  publicRuntimeConfig: {
+    basePath: process.env.NODE_ENV === 'production' ? '/PROJECT_NAME' : '',
+  },
+};
 /* module.exports = withTypescript(
   withMdxFm(
     withSass({

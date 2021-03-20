@@ -4,7 +4,7 @@ import Layout from '../../components/layout';
 import Head from 'next/head';
 import Link from 'next/link';
 import Icon from '../comonents/atoms/icon.js';
-
+import B from '../lib/basepath';
 export default function Home({ posts }) {
   return (
     <div>
@@ -13,7 +13,7 @@ export default function Home({ posts }) {
       </Head>
       <Layout>
         <div className="flex flex-row text-center items-center">
-          <img src="/img/titleDeco.svg" height={50} width={50} className="inline-block" />
+          <img src={B('/img/titleDeco.svg')} height={50} width={50} className="inline-block" />
           <h2 className="ml-2 m-0 inline-block">記事一覧</h2>
         </div>
         <hr className="mb-2"></hr>
@@ -23,7 +23,7 @@ export default function Home({ posts }) {
               <div className="flex flex-col">
                 <header className="my-2">
                   <h3 className="m-0">
-                    <Link href={'/post/[slug]'} as={`/post/${slug}`}>
+                    <Link href={'/post/[slug]'} as={B(`/post/${slug}`)}>
                       <a className="text-xl font-semibold text-k-black no-underline hover:no-underline">
                         {title}
                       </a>
