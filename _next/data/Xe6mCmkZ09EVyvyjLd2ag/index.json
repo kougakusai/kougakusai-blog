@@ -1,0 +1,1 @@
+{"pageProps":{"posts":[{"slug":"sample","frontmatter":{"title":"記事の書き方(ここがタイトル)","description":"ブログ記事の書き方を教えたい(記事の見出し)","updatedAt":"2021/01/20(記事作成日)","date":"2021/01/20(記事作成日)"}},{"slug":"second-post","frontmatter":{"title":"二つ目テスト","description":"テスト","updatedAt":"2021/00/00","date":"2021/00/00"}}]},"__N_SSG":true}
