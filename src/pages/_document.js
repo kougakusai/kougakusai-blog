@@ -6,13 +6,11 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <html>
-          <Head>{/* <TypographyStyle typography={typography} /> */}</Head>
-          <body>
-            <Main />
-            <NextScript />
-          </body>
-        </html>
+        <Head>{/* <TypographyStyle typography={typography} /> */}</Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
       </Html>
     );
   }
