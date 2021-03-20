@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 export default function Icon(props) {
   return (
     <a
@@ -9,7 +7,7 @@ export default function Icon(props) {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <img src={props.name.img} alt={props.name.text} width="56px" />
+      <img src={props.name.img} alt={props.name.text} height={56} width={56} />
     </a>
   );
 }
