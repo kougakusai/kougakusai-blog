@@ -1,10 +1,14 @@
 import Image from 'next/image';
 import Icon from '../atoms/icon';
 
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>;
+
 const Twitter = {
-    text: 'こうがく祭公式Twitterアカウント',
+    text: 'Twitterでシェアする。',
     img: '/img/twitter.svg',
-    url: 'https://twitter.com/2020kougakusai',
+    url: 'https://twitter.com/share?hashtags=こうがく祭ブログ',
+    class: 'twitter-share-button',
+    data_show_count: 'false',
   },
   Youtube = {
     text: 'こうがく祭公式Youtube Channel',
