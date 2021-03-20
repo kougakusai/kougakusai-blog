@@ -46,7 +46,7 @@ export default function Layout({ children }, props) {
             </svg>
             <span className="font-semibold text-xl tracking-tight">Tailwind CSS</span> */}
             <Link href="/">
-              <img src="/img/logo_white.svg" width="100" height="100" />
+              <img src="./img/logo_white.svg" width="100" height="100" />
             </Link>
           </div>
           <div className="block lg:hidden">
