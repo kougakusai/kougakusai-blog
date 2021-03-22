@@ -6,6 +6,10 @@ module.exports = withMDX({
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
 });
 
+module.exports = {
+  basePath: '/kougakusai-blog',
+  assetPrefix: '/kougakusai-blog/',
+};
 /* module.exports = withTypescript(
   withMdxFm(
     withSass({
