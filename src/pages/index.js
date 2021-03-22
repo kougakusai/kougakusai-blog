@@ -23,7 +23,7 @@ export default function Home({ posts }) {
               <div className="flex flex-col">
                 <header className="my-2">
                   <h3 className="m-0">
-                    <Link href={'/post/[slug]'} as={`/post/${slug}`}>
+                    <Link href="/post/[slug]" as={`/post/${slug}`}>
                       <a className="text-xl font-semibold text-k-black no-underline hover:no-underline">
                         {title}
                       </a>
