@@ -5,8 +5,6 @@ import { MDXProvider } from '@mdx-js/react';
 import { Embed } from 'theme-ui';
 import Footer from 'src/comonents/organisms/footer';
 
-const prefix = '/kougakusai-blog';
-
 export default function Layout({ children }, props) {
   // const { pathname } = useRouter();
   // const isRoot = pathname === '/';
@@ -48,7 +46,7 @@ export default function Layout({ children }, props) {
             </svg>
             <span className="font-semibold text-xl tracking-tight">Tailwind CSS</span> */}
             <Link href="/">
-              <img src={prefix + '/img/logo_white.svg'} width="100" height="100" />
+              <img src="./img/logo_white.svg" width="100" height="100" />
             </Link>
           </div>
           <div className="block lg:hidden">
