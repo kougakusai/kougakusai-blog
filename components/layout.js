@@ -5,28 +5,30 @@ import { MDXProvider } from '@mdx-js/react';
 import { Embed } from 'theme-ui';
 import Footer from 'src/comonents/organisms/footer';
 
-export default function Layout({ children }, props) {
-  // const { pathname } = useRouter();
-  // const isRoot = pathname === '/';
+const prefix = '/kougakusai-blog';
 
-  // const shortcodes = { Embed };
-  // const header = isRoot ? (
-  //   <h1 className="mb-16">
-  //     <Link href="/bloglist">
-  //       <a className="text-6xl font-black text-black no-underline bg-gray-300">
-  //         こうがく祭HP村技術ブログ
-  //       </a>
-  //     </Link>
-  //   </h1>
-  // ) : (
-  //   <h1 className="mb-16">
-  //     <Link href="/bloglist">
-  //       <a className="text-6xl font-black text-black no-underline bg-gray-300">
-  //         こうがく祭HP村技術ブログ
-  //       </a>
-  //     </Link>
-  //   </h1>
-  // );
+export default function Layout({ children }, props) {
+  const { pathname } = useRouter();
+  const isRoot = pathname === '/';
+
+  const shortcodes = { Embed };
+  const header = isRoot ? (
+    <h1 className="mb-16">
+      <Link href="/bloglist">
+        <a className="text-6xl font-black text-black no-underline bg-gray-300">
+          こうがく祭HP村技術ブログ
+        </a>
+      </Link>
+    </h1>
+  ) : (
+    <h1 className="mb-16">
+      <Link href="/bloglist">
+        <a className="text-6xl font-black text-black no-underline bg-gray-300">
+          こうがく祭HP村技術ブログ
+        </a>
+      </Link>
+    </h1>
+  );
 
   return (
     <div className="">
@@ -46,7 +48,7 @@ export default function Layout({ children }, props) {
             </svg>
             <span className="font-semibold text-xl tracking-tight">Tailwind CSS</span> */}
             <Link href="/">
-              <img src="./img/logo_white.svg" width="100" height="100" />
+              <img src={prefix + '/img/logo_white.svg'} width="100" height="100" />
             </Link>
           </div>
           <div className="block lg:hidden">
