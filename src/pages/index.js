@@ -5,6 +5,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Icon from '../comonents/atoms/icon.js';
 
+const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export default function Home({ posts }) {
   return (
     <div>
@@ -13,7 +15,12 @@ export default function Home({ posts }) {
       </Head>
       <Layout>
         <div className="flex flex-row text-center items-center">
-          <img src="./img/titleDeco.svg" height={50} width={50} className="inline-block" />
+          <img
+            src={prefix + '/img/titleDeco.svg'}
+            height={50}
+            width={50}
+            className="inline-block"
+          />
           <h2 className="ml-2 m-0 inline-block">記事一覧</h2>
         </div>
         <hr className="mb-2"></hr>

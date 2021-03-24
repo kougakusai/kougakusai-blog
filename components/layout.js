@@ -5,7 +5,7 @@ import { MDXProvider } from '@mdx-js/react';
 import { Embed } from 'theme-ui';
 import Footer from 'src/comonents/organisms/footer';
 
-const prefix = '/kougakusai-blog';
+const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default function Layout({ children }, props) {
   const { pathname } = useRouter();
