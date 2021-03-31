@@ -1,3 +1,4 @@
+import Link from 'next/link';
 export default function FooterMenu() {
   return (
     <div className="flex flex-row divide-solid divide-white divide-x-2 divide-y-0 mb-8 items-center justify-center text-center justify-items-stretch text-sm h-full w-full">
