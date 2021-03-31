@@ -26,23 +26,23 @@ export default function Home({ posts }) {
         <hr className="mb-2"></hr>
         {posts.map(({ frontmatter: { title, description, updatedAt }, slug }) => (
           <article key={slug}>
-            <div className="flex flex-row">
-              <div className="flex flex-col">
-                <header className="my-2">
-                  <h3 className="m-0">
-                    <Link href="/post/[slug]" as={`/post/${slug}`}>
+            <Link href="/post/[slug]" as={`/post/${slug}`}>
+              <div className="flex flex-row cursor-pointer">
+                <div className="flex flex-col">
+                  <header className="my-2">
+                    <h3 className="m-0">
                       <a className="text-xl font-semibold text-k-black no-underline hover:no-underline">
                         {title}
                       </a>
-                    </Link>
-                  </h3>
-                </header>
-                <section className="flex flex-row flex-nowrap mb-4 text-xl">
-                  <p className="m-0 text-k-darkgray">{updatedAt}</p>
-                  <p className="ml-8 m-0 text-k-pink">{description}</p>
-                </section>
+                    </h3>
+                  </header>
+                  <section className="flex flex-row flex-nowrap mb-4 text-xl">
+                    <p className="m-0 text-k-darkgray">{updatedAt}</p>
+                    <p className="ml-8 m-0 text-k-pink">{description}</p>
+                  </section>
+                </div>
               </div>
-            </div>
+            </Link>
             <hr className="mb-2"></hr>
           </article>
         ))}
