@@ -3,18 +3,26 @@ export default function FooterMenu() {
   return (
     <div className="flex flex-row divide-solid divide-white divide-x-2 divide-y-0 mb-8 items-center justify-center text-center justify-items-stretch text-sm h-full w-full">
       <div className="flex px-8">
-        <a className="flex justify-center text-center" title="Aboutページへ" href="./about">
+        <a
+          className="flex justify-center text-center no-underline hover:no-underline"
+          title="Aboutページへ"
+          href="./about"
+        >
           <p className="text-white m-0">このブログについて</p>
         </a>
       </div>
       <div className="flex px-8">
-        <a className="flex justify-center text-center" title="問い合わせページへ" href="./inquiry">
+        <a
+          className="flex justify-center text-center no-underline hover:no-underline"
+          title="問い合わせページへ"
+          href="./inquiry"
+        >
           <p className="text-white m-0">お問い合わせ</p>
         </a>
       </div>
       <div className="flex px-8">
         <a
-          className="flex justify-center text-center"
+          className="flex justify-center text-center no-underline hover:no-underline"
           title="プライバシーポリシーページへ"
           href="./privacy"
         >

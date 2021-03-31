@@ -3,7 +3,7 @@ import CopyRight from '../atoms/copyright';
 
 export default function Footer() {
   return (
-    <footer className="bg-k-indigo md:flex flex-col hidden items-center justify-center no-underline hover:no-underline py-4 space-y-4 text-center w-full">
+    <footer className="bg-k-indigo md:flex flex-col hidden items-center justify-center py-4 space-y-4 text-center w-full">
       <FooterMenu />
       <CopyRight />
     </footer>
