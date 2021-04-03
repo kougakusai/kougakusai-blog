@@ -1,7 +1,7 @@
 import Link from 'next/link';
 export default function FooterMenu() {
   return (
-    <div className="flex flex-row divide-solid divide-white divide-x-2 divide-y-0 mb-8 items-center justify-center text-center justify-items-stretch text-sm h-full w-full">
+    <div className="flex flex-col lg:flex-row divide-solid divide-white divide-x-0 lg:divide-x-2 divide-y-0 space-y-1 lg:space-y-0 lg:mb-8 items-center justify-center text-center justify-items-stretch text-sm h-full w-full">
       <div className="flex px-8">
         <a
           className="flex justify-center text-center no-underline hover:no-underline"
