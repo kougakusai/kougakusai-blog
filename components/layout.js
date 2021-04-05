@@ -1,15 +1,20 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import React from 'react';
 import { MDXProvider } from '@mdx-js/react';
 import { Embed } from 'theme-ui';
 import Footer from 'src/comonents/organisms/footer';
+import React, { useState } from 'react';
 
 const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default function Layout({ children }, props) {
   const { pathname } = useRouter();
   const isRoot = pathname === '/';
+
+  const [menu, setMenu] = useState(false);
+  const clickMenu = () => {
+    setMenu(!menu);
+  };
 
   const shortcodes = { Embed };
   const header = isRoot ? (
@@ -31,75 +36,147 @@ export default function Layout({ children }, props) {
   );
 
   return (
-    <div className="">
+    <div className="min-h-screen">
       <header>
-        <div className="bg-hero-pattern w-full h-130 sm:h-315 bg-cover bg-center bg-no-repeat"></div>
-        {/* <img src="/img/header.jpg" className="w-full text-center h-auto " /> */}
-        <nav className="flex justify-between bg-k-indigo justify-between flex-wrap px-6">
-          <div className="flex items-center flex-no-shrink text-white mr-6">
-            {/* <svg
-              className="h-8 w-8 mr-2"
-              width="54"
-              height="54"
-              viewBox="0 0 54 54"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" />
-            </svg>
-            <span className="font-semibold text-xl tracking-tight">Tailwind CSS</span> */}
-            <Link href="/">
-              <img src={prefix + '/img/logo_white.svg'} width="100" height="100" />
-            </Link>
-          </div>
-          <div className="block lg:hidden">
-            <button className="flex items-center px-3 py-2 border rounded bg-transparent text-teal-lighter border-teal-light hover:text-white hover:border-white">
-              <svg
-                className="h-3 w-3 bg-white"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>Menu</title>
-                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-              </svg>
-            </button>
-          </div>
-          <div className="w-full block lg:flex lg:items-center lg:w-auto">
-            <div className="text-sm lg:flex-grow">
-              <a
-                href="#responsive-header"
-                className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4"
-              >
-                記事一覧
-              </a>
-              <a
-                href="#responsive-header"
-                className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4"
-              >
-                当サイトについて
-              </a>
-              <a
-                href="#responsive-header"
-                className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white"
-              >
-                お問い合わせ
-              </a>
+        <nav className="bg-gray-800 fixed w-full">
+          <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div className="relative flex items-center justify-between h-16">
+              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                <button
+                  type="button"
+                  className="inline-flex items-center bg-k-indigo justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                  aria-controls="mobile-menu"
+                  aria-expanded="false"
+                  onClick={clickMenu}
+                >
+                  <span className="sr-only">Open main menu</span>
+
+                  <svg
+                    className="block h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  </svg>
+
+                  <svg
+                    className="hidden h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div className="flex-1 flex items-center justify-center sm:justify-between	">
+                <div className="flex-shrink-0 flex items-center">
+                  <Link href="/">
+                    <img
+                      className="block lg:hidden w-auto cursor-pointer"
+                      src={prefix + '/img/logo_white.svg'}
+                      alt="Workflow"
+                      height="60"
+                      width="60"
+                    />
+                  </Link>
+                  <Link href="/">
+                    <img
+                      className="hidden lg:block w-auto cursor-pointer"
+                      src={prefix + '/img/logo_white.svg'}
+                      alt="Workflow"
+                      height="60"
+                      width="60"
+                    />
+                  </Link>
+                </div>
+                <div className="hidden sm:block sm:ml-6">
+                  <div className="flex space-x-4">
+                    <Link href="/">
+                      <a
+                        className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                        aria-current="page"
+                      >
+                        記事一覧
+                      </a>
+                    </Link>
+                    <Link href="/about">
+                      <a className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                        このサイトについて
+                      </a>
+                    </Link>
+                    <Link href="/contact">
+                      <a className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                        お問い合わせ
+                      </a>
+                    </Link>
+
+                    {/* <a
+                      href="#"
+                      className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    >
+                      Calendar
+                    </a> */}
+                  </div>
+                </div>
+              </div>
             </div>
-            <div>
-              <a
+          </div>
+
+          <div className={menu ? ' sm:hidden' : 'hidden'} id="mobile-menu">
+            <div className="px-2 pt-2 pb-3 space-y-1">
+              <Link href="/">
+                <a
+                  className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+                  aria-current="page"
+                >
+                  記事一覧
+                </a>
+              </Link>
+
+              <Link href="/about">
+                <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                  このサイトについて
+                </a>
+              </Link>
+              <Link href="/contact">
+                <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                  お問い合わせ
+                </a>
+              </Link>
+
+              {/* <a
                 href="#"
-                className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal hover:bg-white mt-4 lg:mt-0"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
               >
-                Download
-              </a>
+                Calendar
+              </a> */}
             </div>
           </div>
         </nav>
+        <div className="bg-hero-pattern w-full h-130 inline-block mt-header sm:h-315 bg-cover bg-center bg-no-repeat"></div>
+        {/* <img src="/img/header.jpg" className="w-full text-center h-auto " /> */}
       </header>
       <MDXProvider components={shortcodes}>
         <main {...props} />
       </MDXProvider>
 
-      <main className="container mx-auto">{children}</main>
+      <main className="container mx-auto min-h-screen">{children}</main>
       {/* <footer>
         <Link href="/bloglist">
           <p className="text-right">

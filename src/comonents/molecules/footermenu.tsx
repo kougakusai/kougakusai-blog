@@ -10,18 +10,22 @@ export default function FooterMenu() {
         </Link>
       </div>
       <div className="md:border-white md:border-r-2 flex px-8">
-        <a className="flex justify-center text-center" title="問い合わせページへ" href="./inquiry">
-          <p className="text-white">お問い合わせ</p>
-        </a>
+        <Link href="/contact">
+          <a className="flex justify-center text-center" title="問い合わせページへ">
+            <p className="text-white">お問い合わせ</p>
+          </a>
+        </Link>
       </div>
       <div className="flex px-8">
-        <a
-          className="flex justify-center text-center"
-          title="プライバシーポリシーページへ"
-          href="./privacy"
-        >
-          <p className="text-white">プライバシーポリシー</p>
-        </a>
+        <Link href="/policy">
+          <a
+            className="flex justify-center text-center"
+            title="プライバシーポリシーページへ"
+            href="./privacy"
+          >
+            <p className="text-white">プライバシーポリシー</p>
+          </a>
+        </Link>
       </div>
     </div>
   );
