@@ -14,7 +14,7 @@ const CodeBlock = ({ language, value }) => {
 export default function Post({ content, frontmatter }) {
   return (
     <Layout>
-      <article>
+      <article className="mx-auto w-3/4 mb-10">
         <ReactMarkdown escapeHtml={false} source={content} renderers={{ code: CodeBlock }} />
       </article>
     </Layout>

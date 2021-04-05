@@ -1,4 +1,4 @@
-const colors = require('tailwindcss/colors');
+const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 module.exports = {
   purge: [
@@ -8,14 +8,6 @@ module.exports = {
   ],
   darkMode: 'media', // or 'media' or 'class'
   theme: {
-    minHeight: {
-      0: '0',
-      '1/4': '25%',
-      '1/2': '50%',
-      '3/4': '75%',
-      full: '100%',
-      315: '315px',
-    },
     minWidth: {
       0: '0',
       '1/4': '25%',
@@ -53,17 +45,32 @@ module.exports = {
         '4/7': '57.1428571%',
         '5/7': '71.4285714%',
         '6/7': '85.7142857%',
+        header: '60',
         130: '130px',
         315: '315px',
       },
+      minHeight: {
+        0: '0',
+        '1/4': '25%',
+        '1/2': '50%',
+        '3/4': '75%',
+        full: '100%',
+        315: '315px',
+      },
+      margin: {
+        header: '60px',
+      },
+      padding: {
+        header: '60px',
+      },
       backgroundImage: (theme) => ({
-        'hero-pattern': "url('/img/header.jpg')",
+        'hero-pattern': "url('https://kougakusaihpteam.github.io/kougakusai-blog/img/header.jpg')",
         'footer-texture': "url('/img/footer-texture.png')",
       }),
     },
   },
   variants: {
-    extend: {},
+    /* extend: {}, */
   },
   plugins: [],
   corePlugins: {
