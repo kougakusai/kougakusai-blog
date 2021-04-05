@@ -19,7 +19,10 @@ export default function About() {
         <section>
           <h2>こうがく祭とは</h2>
           <p>
-            　<a href="https://kougakusai.jp/">こうがく祭</a>
+            　
+            <a title="2020年度こうがく祭HPへ" href="https://kougakusai.jp/">
+              こうがく祭
+            </a>
             は、茨城大学工学部で秋頃に開催される学園祭です。研究室公開・サークル発表や模擬店などを日立キャンパスで開催しています。
           </p>
         </section>
