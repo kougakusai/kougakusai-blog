@@ -1,5 +1,3 @@
-const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
-
 module.exports = {
   purge: [
     './components/**/*.{js,ts,jsx,tsx}',

@@ -176,7 +176,7 @@ export default function Layout({ children }, props) {
         <main {...props} />
       </MDXProvider>
 
-      <main className="container mx-auto min-h-screen">{children}</main>
+      <main className="container min-h-screen p-8 w-4/5 mx-auto">{children}</main>
       {/* <footer>
         <Link href="/bloglist">
           <p className="text-right">

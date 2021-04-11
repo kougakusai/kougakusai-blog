@@ -15,7 +15,7 @@ export default function Home({ posts }) {
         <title>記事</title>
       </Head>
       <Layout>
-        <div className="p-8 w-4/5 mx-auto">
+        <div>
           <Title title="記事一覧" />
           <hr className="mb-2"></hr>
           {posts.map(({ frontmatter: { title, description, updatedAt }, slug }) => (

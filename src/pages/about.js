@@ -4,8 +4,9 @@ import Layout from '../../components/layout';
 import Title from '../comonents/organisms/title';
 const About = () => {
   return (
-    <Layout>
-      {/* <div className="bg-purple-100 flex flex-col items-center justify-center h-screen w-4/5 max-w-5xl mx-auto">
+    <div>
+      <Layout>
+        {/* <div className="bg-purple-100 flex flex-col items-center justify-center h-screen w-4/5 max-w-5xl mx-auto">
         <div className="flex flex-row h-full w-full">
           <SideBar />
           <div className="border-8 border-transparent flex flex-col lg:h-full h-4/5 items-center justify-evenly text-center w-full">
@@ -18,10 +19,11 @@ const About = () => {
           </div>
         </div>
       </div> */}
-      <div>
-        <Title title="このサイトについて" />
-      </div>
-    </Layout>
+        <div>
+          <Title title="このサイトについて" />
+        </div>
+      </Layout>
+    </div>
   );
 };
 
