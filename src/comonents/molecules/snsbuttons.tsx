@@ -1,37 +1,37 @@
-import Icon from '../atoms/icon';
+// import Icon from '../atoms/icon';
 
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>;
+// <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>;
 
-const Twitter = {
-    text: 'Twitterでシェアする。',
-    img: '/img/twitter.svg',
-    url: 'https://twitter.com/share?hashtags=こうがく祭ブログ',
-    class: 'twitter-share-button',
-    data_show_count: 'false',
-  },
-  Youtube = {
-    text: 'こうがく祭公式Youtube Channel',
-    img: '/img/youtube.svg',
-    url: 'https://www.youtube.com/channel/UC8yEgipIcHHSkRlTLcm4tBw/',
-  },
-  Instagram = {
-    text: 'こうがく祭公式Instagramアカウント',
-    img: '/img/instagram.svg',
-    url: 'https://www.instagram.com/kougakusai2020/',
-  };
+// const Twitter = {
+//     text: 'Twitterでシェアする。',
+//     img: '/img/twitter.svg',
+//     url: 'https://twitter.com/share?hashtags=こうがく祭ブログ',
+//     class: 'twitter-share-button',
+//     data_show_count: 'false',
+//   },
+//   Youtube = {
+//     text: 'こうがく祭公式Youtube Channel',
+//     img: '/img/youtube.svg',
+//     url: 'https://www.youtube.com/channel/UC8yEgipIcHHSkRlTLcm4tBw/',
+//   },
+//   Instagram = {
+//     text: 'こうがく祭公式Instagramアカウント',
+//     img: '/img/instagram.svg',
+//     url: 'https://www.instagram.com/kougakusai2020/',
+//   };
 
-export default function SNSButtons() {
-  return (
-    <ul className="flex md:flex-col flex-row h-56 justify-around list-none w-full">
-      <li className="list-none">
-        <Icon name={Twitter} />
-      </li>
-      <li className="list-none">
-        <Icon name={Youtube} />
-      </li>
-      <li className="list-none">
-        <Icon name={Instagram} />
-      </li>
-    </ul>
-  );
-}
+// export default function SNSButtons() {
+//   return (
+//     <ul className="flex md:flex-col flex-row h-56 justify-around list-none w-full">
+//       <li className="list-none">
+//         <Icon name={Twitter} />
+//       </li>
+//       <li className="list-none">
+//         <Icon name={Youtube} />
+//       </li>
+//       <li className="list-none">
+//         <Icon name={Instagram} />
+//       </li>
+//     </ul>
+//   );
+// }
