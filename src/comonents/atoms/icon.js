@@ -1,12 +1,14 @@
 import Image from 'next/image';
 
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>;
+{
+  /* <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>; */
+}
 
 export default function Icon(props) {
   return (
     <a
       className="flex justify-around h-full w-full"
-      class={props.name.class}
+      className={props.name.class}
       title={props.name.text}
       href={props.name.url}
       target="_blank"
