@@ -9,19 +9,31 @@ const About = () => {
         <title>このサイトについて</title>
       </Head>
       <Layout>
-        {/* <div className="bg-purple-100 flex flex-col items-center justify-center h-screen w-4/5 max-w-5xl mx-auto">
-        <div className="flex flex-row h-full w-full">
-          <SideBar />
-          <div className="border-8 border-transparent flex flex-col lg:h-full h-4/5 items-center justify-evenly text-center w-full">
-            <h1 className="text-4xl text-blue-700 mb-2">About Page</h1>
-            <p className="mb-8">
-              ここはこうがく祭のぎじゅつブログ。<br></br>
-              つかったぎじゅつのおはなしを日立からおとどけするよ!
-            </p>
-            <p>[Any Contents]</p>
-          </div>
+        <div>
+          <Title title="ABOUT KOUGAKUSAI BLOG" />
         </div>
-      </div> */}
+        <hr></hr>
+        <article>
+          <section>
+            <h2>このサイトについて</h2>
+            <p>
+              　このサイトでは、こうがく祭の運営を担当する実行委員の学生が、仕事内容や創意工夫・使用した技術などについて紹介します。
+            </p>
+          </section>
+          <br></br>
+          <section>
+            <h2>こうがく祭とは</h2>
+            <p>
+              　
+              <a title="2020年度こうがく祭HPへ" href="https://kougakusai.jp/">
+                こうがく祭
+              </a>
+              は、茨城大学工学部で毎年11月頃に開催される学園祭です。工学部ならではの企画・研究室公開・サークル発表や模擬店などを日立キャンパスで開催しています。毎年一般の方や学生の方含め多くの方にご参加していただいております。
+              2020年度は、オンラインで開催いたしました。
+            </p>
+          </section>
+        </article>
+        {/*
         <div>
           <div className="mb-5">
             <Title title="このサイトについて" />
@@ -33,6 +45,7 @@ const About = () => {
             </p>
           </div>
         </div>
+        */}
       </Layout>
     </div>
   );
