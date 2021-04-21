@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>;
 
 export default function Icon(props) {
@@ -13,7 +11,7 @@ export default function Icon(props) {
       rel="noopener noreferrer"
       data-show-count={props.name.data_show_count}
     >
-      <Image src={props.name.img} alt={props.name.text} height={56} width={56} />
+      {/* <Image src={props.name.img} alt={props.name.text} height={56} width={56} /> */}
     </a>
   );
 }
