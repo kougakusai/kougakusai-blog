@@ -57,6 +57,7 @@ module.exports = {
       },
       margin: {
         header: '60px',
+        50: '50px',
       },
       padding: {
         header: '60px',

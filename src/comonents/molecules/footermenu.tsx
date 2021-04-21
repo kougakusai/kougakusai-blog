@@ -1,31 +1,38 @@
 import Link from 'next/link';
+
+const AboutPageLink = './about',
+  InquiryPageLink = './contact',
+  PolicyPageLink = './policy';
+
 export default function FooterMenu() {
   return (
-    <div className="flex flex-row md:flex-row items-center justify-center text-center justify-items-stretch text-sm h-full w-full">
-      <div className="md:border-white md:border-r-2 flex px-8">
-        <Link href="./about">
-          <a className="flex justify-center text-center" title="Aboutページへ">
-            <p className="text-white">このブログについて</p>
-          </a>
-        </Link>
+    <div className="flex flex-col lg:flex-row divide-solid divide-white divide-x-0 lg:divide-x-2 divide-y-0 space-y-1 lg:space-y-0 lg:mb-8 justify-start lg:justify-center text-left lg:text-center text-sm h-full w-full">
+      <div className="flex flex-initial px-4">
+        <a
+          className="flex justify-center text-center no-underline hover:no-underline"
+          title="Aboutページへ"
+          href={AboutPageLink}
+        >
+          <p className="text-white m-0">このブログについて</p>
+        </a>
       </div>
-      <div className="md:border-white md:border-r-2 flex px-8">
-        <Link href="/contact">
-          <a className="flex justify-center text-center" title="問い合わせページへ">
-            <p className="text-white">お問い合わせ</p>
-          </a>
-        </Link>
+      <div className="flex flex-initial px-4">
+        <a
+          className="flex justify-center text-center no-underline hover:no-underline"
+          title="問い合わせページへ"
+          href={InquiryPageLink}
+        >
+          <p className="text-white m-0">お問い合わせ</p>
+        </a>
       </div>
-      <div className="flex px-8">
-        <Link href="/policy">
-          <a
-            className="flex justify-center text-center"
-            title="プライバシーポリシーページへ"
-            href="./privacy"
-          >
-            <p className="text-white">プライバシーポリシー</p>
-          </a>
-        </Link>
+      <div className="flex flex-initial px-4">
+        <a
+          className="flex justify-center text-center no-underline hover:no-underline"
+          title="サイトポリシーページへ"
+          href={PolicyPageLink}
+        >
+          <p className="text-white m-0">サイトポリシー</p>
+        </a>
       </div>
     </div>
   );
