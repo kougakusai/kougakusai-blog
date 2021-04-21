@@ -63,7 +63,7 @@ module.exports = {
         header: '60px',
       },
       backgroundImage: (theme) => ({
-        'hero-pattern': "url('https://kougakusaihpteam.github.io/kougakusai-blog/img/header.jpg')",
+        'hero-pattern': "url('https://kougakusai.github.io/kougakusai-blog/img/header.jpg')",
         'footer-texture': "url('/img/footer-texture.png')",
       }),
     },
