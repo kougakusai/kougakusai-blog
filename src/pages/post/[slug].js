@@ -4,6 +4,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown/with-html';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import Head from 'next/head';
 
 import Layout from '../../../components/layout';
 
@@ -13,11 +14,16 @@ const CodeBlock = ({ language, value }) => {
 
 export default function Post({ content, frontmatter }) {
   return (
-    <Layout>
-      <article className="mx-auto w-3/4 mb-10">
-        <ReactMarkdown escapeHtml={false} source={content} renderers={{ code: CodeBlock }} />
-      </article>
-    </Layout>
+    <div>
+      <Head>
+        <title>{frontmatter.title}</title>
+      </Head>
+      <Layout>
+        <article className="">
+          <ReactMarkdown escapeHtml={false} source={content} renderers={{ code: CodeBlock }} />
+        </article>
+      </Layout>
+    </div>
   );
 }
 

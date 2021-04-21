@@ -1,5 +1,3 @@
-const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
-
 module.exports = {
   purge: [
     './components/**/*.{js,ts,jsx,tsx}',
@@ -59,12 +57,13 @@ module.exports = {
       },
       margin: {
         header: '60px',
+        50: '50px',
       },
       padding: {
         header: '60px',
       },
       backgroundImage: (theme) => ({
-        'hero-pattern': "url('https://kougakusaihpteam.github.io/kougakusai-blog/img/header.jpg')",
+        'hero-pattern': "url('https://kougakusai.github.io/kougakusai-blog/img/header.jpg')",
         'footer-texture': "url('/img/footer-texture.png')",
       }),
     },

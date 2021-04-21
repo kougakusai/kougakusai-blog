@@ -15,7 +15,7 @@ export default function Home({ posts }) {
         <title>記事</title>
       </Head>
       <Layout>
-        <div className="p-8 w-4/5 mx-auto">
+        <div>
           <Title title="記事一覧" />
           <hr className="mb-2"></hr>
           {posts.map(({ frontmatter: { title, description, updatedAt }, slug }) => (
@@ -32,7 +32,7 @@ export default function Home({ posts }) {
                     </header>
                     <section className="flex flex-row flex-nowrap mb-4 text-xl">
                       <p className="m-0 text-k-darkgray">{updatedAt}</p>
-                      <p className="ml-8 m-0 text-k-pink">{description}</p>
+                      {/* <p className="ml-8 m-0 text-k-pink">{description}</p> */}
                     </section>
                   </div>
                   <div className="flex mr-6 justify-center justify-items-center items-center">

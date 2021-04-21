@@ -1,6 +1,6 @@
 import Icon from '../atoms/icon';
 
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>;
+<script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>;
 
 const Twitter = {
     text: 'Twitterでシェアする。',
