@@ -38,7 +38,7 @@ export default function Layout({ children }, props) {
   return (
     <div className="min-h-screen font-sams">
       <header>
-        <nav className="bg-gray-800 fixed w-full no-underline">
+        <nav className="bg-gray-800 fixed w-full no-underline z-50">
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -117,7 +117,7 @@ export default function Layout({ children }, props) {
                     </Link>
                     <Link href="/about">
                       <a className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium no-underline">
-                        このサイトについて
+                        このブログについて
                       </a>
                     </Link>
                     <Link href="/contact">
@@ -151,7 +151,7 @@ export default function Layout({ children }, props) {
 
               <Link href="/about">
                 <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium no-underline">
-                  このサイトについて
+                  このブログについて
                 </a>
               </Link>
               <Link href="/contact">

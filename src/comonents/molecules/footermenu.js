@@ -37,6 +37,16 @@ export default function FooterMenu() {
           </a>
         </Link>
       </div>
+      <div className="flex flex-initial px-4">
+        <Link href="/privacy">
+          <a
+            className="flex justify-center text-center no-underline hover:no-underline"
+            title="プライバシーポリシhーページへ"
+          >
+            <p className="text-white m-0">プライバシーポリシー</p>
+          </a>
+        </Link>
+      </div>
     </div>
   );
 }
