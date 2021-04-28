@@ -10,6 +10,12 @@ module.exports = {
   basePath: process.env.NEXT_PUBLIC_BASE_PATH,
   assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH,
 };
+
+// module.exports = {
+//   future: {
+//     webpack5: true,
+//   },
+// };
 /* module.exports = withTypescript(
   withMdxFm(
     withSass({

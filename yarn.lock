@@ -3011,6 +3011,23 @@
   "resolved" "https://registry.npmjs.org/hast-util-parse-selector/-/hast-util-parse-selector-2.2.5.tgz"
   "version" "2.2.5"
 
+"hast-util-raw@^6.1.0":
+  "integrity" "sha512-5FoZLDHBpka20OlZZ4I/+RBw5piVQ8iI1doEvffQhx5CbCyTtP8UCq8Tw6NmTAMtXgsQxmhW7Ly8OdFre5/YMQ=="
+  "resolved" "https://registry.npmjs.org/hast-util-raw/-/hast-util-raw-6.1.0.tgz"
+  "version" "6.1.0"
+  dependencies:
+    "@types/hast" "^2.0.0"
+    "hast-util-from-parse5" "^6.0.0"
+    "hast-util-to-parse5" "^6.0.0"
+    "html-void-elements" "^1.0.0"
+    "parse5" "^6.0.0"
+    "unist-util-position" "^3.0.0"
+    "unist-util-visit" "^2.0.0"
+    "vfile" "^4.0.0"
+    "web-namespaces" "^1.0.0"
+    "xtend" "^4.0.0"
+    "zwitch" "^1.0.0"
+
 "hast-util-raw@6.0.1":
   "integrity" "sha512-ZMuiYA+UF7BXBtsTBNcLBF5HzXzkyE6MLzJnL605LKE8GJylNjGc4jjxazAHUtcwT5/CEt6afRKViYB4X66dig=="
   "resolved" "https://registry.npmjs.org/hast-util-raw/-/hast-util-raw-6.0.1.tgz"
@@ -3747,9 +3764,9 @@
     "unist-util-visit" "^2.0.0"
 
 "mdast-util-from-markdown@^0.8.0":
-  "integrity" "sha512-jj891B5pV2r63n2kBTFh8cRI2uR9LQHsXG1zSDqfhXkIlDzrTcIlbB5+5aaYEkl8vOPIOPLf8VT7Ere1wWTMdw=="
-  "resolved" "https://registry.npmjs.org/mdast-util-from-markdown/-/mdast-util-from-markdown-0.8.4.tgz"
-  "version" "0.8.4"
+  "integrity" "sha512-2hkTXtYYnr+NubD/g6KGBS/0mFmBcifAsI0yIWRiRo0PjVs6SSOSOdtzbp6kSGnShDN6G5aWZpKQ2lWRy27mWQ=="
+  "resolved" "https://registry.npmjs.org/mdast-util-from-markdown/-/mdast-util-from-markdown-0.8.5.tgz"
+  "version" "0.8.5"
   dependencies:
     "@types/mdast" "^3.0.0"
     "mdast-util-to-string" "^2.0.0"
@@ -3823,9 +3840,9 @@
   "version" "1.4.1"
 
 "micromark@~2.11.0":
-  "integrity" "sha512-IXuP76p2uj8uMg4FQc1cRE7lPCLsfAXuEfdjtdO55VRiFO1asrCSQ5g43NmPqFtRwzEnEhafRVzn2jg0UiKArQ=="
-  "resolved" "https://registry.npmjs.org/micromark/-/micromark-2.11.2.tgz"
-  "version" "2.11.2"
+  "integrity" "sha512-+WoovN/ppKolQOFIAajxi7Lu9kInbPxFuTBVEavFcL8eAfVstoc5MocPmqBeAdBOJV00uaVjegzH4+MA0DN/uA=="
+  "resolved" "https://registry.npmjs.org/micromark/-/micromark-2.11.4.tgz"
+  "version" "2.11.4"
   dependencies:
     "debug" "^4.0.0"
     "parse-entities" "^2.0.0"
@@ -5190,6 +5207,13 @@
   "version" "3.1.0"
   dependencies:
     "rc" "^1.0.1"
+
+"rehype-raw@^5.1.0":
+  "integrity" "sha512-MDvHAb/5mUnif2R+0IPCYJU8WjHa9UzGtM/F4AVy5GixPlDZ1z3HacYy4xojDU+uBa+0X/3PIfyQI26/2ljJNA=="
+  "resolved" "https://registry.npmjs.org/rehype-raw/-/rehype-raw-5.1.0.tgz"
+  "version" "5.1.0"
+  dependencies:
+    "hast-util-raw" "^6.1.0"
 
 "remark-footnotes@2.0.0":
   "integrity" "sha512-3Clt8ZMH75Ayjp9q4CorNeyjwIxHFcTkaektplKGl2A1jNGEUey8cKL0ZC5vJwfcD5GFGsNLImLG/NGzWIzoMQ=="
