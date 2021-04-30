@@ -25,7 +25,7 @@ export default class MyDocument extends Document {
           <meta property="og:site_name" content="こうがく祭実行委員会公式ブログ" />
           <meta
             property="og:image"
-            content=" https://kougakusai.github.io/kougakusai-blog/og.jpg/"
+            content=" https://kougakusai.github.io/kougakusai-blog/og.jpg"
           />
         </Head>
         <body>
