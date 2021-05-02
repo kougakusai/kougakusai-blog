@@ -4,6 +4,7 @@ import { MDXProvider } from '@mdx-js/react';
 import { Embed } from 'theme-ui';
 import Footer from 'src/comonents/organisms/footer';
 import React, { useState } from 'react';
+import pageLink from "../src/comonents/organisms/pageLink"
 
 const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
@@ -16,7 +17,7 @@ export default function Layout({ children }, props) {
     setMenu(!menu);
   };
 
-  const shortcodes = { Embed };
+  const shortcodes = { pageLink };
   const header = isRoot ? (
     <h1 className="mb-16">
       <Link href="/bloglist">
@@ -125,6 +126,13 @@ export default function Layout({ children }, props) {
                         お問い合わせ
                       </a>
                     </Link>
+                    <a
+                      className="text-gray-300 bg-k-pink hover:text-white px-3 py-2 rounded-md text-sm font-medium no-underline"
+                      href="https://kougakusai.jp/"
+                      target="_blank"
+                    >
+                      こうがく祭HPへ
+                    </a>
 
                     {/* <a
                       href="#"
@@ -159,6 +167,13 @@ export default function Layout({ children }, props) {
                   お問い合わせ
                 </a>
               </Link>
+              <a
+                className="text-gray-300 bg-k-pink hover:text-white block px-3 py-2 w-1/3 rounded-md text-base font-medium no-underline"
+                href="https://kougakusai.jp/"
+                target="_blank"
+              >
+                こうがく祭HPへ
+              </a>
 
               {/* <a
                 href="#"
