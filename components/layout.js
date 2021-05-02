@@ -4,7 +4,7 @@ import { MDXProvider } from '@mdx-js/react';
 import { Embed } from 'theme-ui';
 import Footer from 'src/comonents/organisms/footer';
 import React, { useState } from 'react';
-import pageLink from "../src/comonents/organisms/pageLink"
+import pageLink from '../src/comonents/organisms/pageLink';
 
 const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
@@ -150,7 +150,7 @@ export default function Layout({ children }, props) {
             <div className="px-2 pt-2 pb-3 space-y-1">
               <Link href="/">
                 <a
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium no-underline"
+                  className="text-white block px-3 py-2 rounded-md text-base font-medium no-underline"
                   aria-current="page"
                 >
                   記事一覧
@@ -158,17 +158,17 @@ export default function Layout({ children }, props) {
               </Link>
 
               <Link href="/about">
-                <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium no-underline">
+                <a className="text-white block px-3 py-2 rounded-md text-base font-medium no-underline">
                   このブログについて
                 </a>
               </Link>
               <Link href="/contact">
-                <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium no-underline">
+                <a className="text-gray-300 block px-3 py-2 rounded-md text-base font-medium no-underline">
                   お問い合わせ
                 </a>
               </Link>
               <a
-                className="text-gray-300 bg-k-pink hover:text-white block px-3 py-2 w-1/3 rounded-md text-base font-medium no-underline"
+                className="text-white bg-k-pink block px-3 py-2 w-1/3 rounded-md text-base font-medium no-underline"
                 href="https://kougakusai.jp/"
                 target="_blank"
               >
