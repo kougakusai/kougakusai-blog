@@ -1,6 +1,7 @@
 import Layout from '../../components/layout';
 import Title from '../comonents/organisms/title';
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function Policy() {
   return (
@@ -14,9 +15,14 @@ export default function Policy() {
             <Title title="サイトポリシー" />
           </div>
           <div className="sm:ml-50">
-            <p>このウェブサイトは、茨城大学こうがく祭の公式ブログ（以下「当サイト」）です。</p>
             <p>
-              当サイトは、こうがく祭実行委員会（以下「当委員会」）が作成・管理しています。ご質問やご意見などがありましたら、「お問い合わせ」のページ
+              このウェブサイトは、茨城大学こうがく祭実行委員会の公式ブログ（以下「当サイト」）です。
+            </p>
+            <p>
+              当サイトは、こうがく祭実行委員会（以下「当委員会」）が作成・管理しています。ご質問やご意見などがありましたら、
+              <Link href="./contact">
+                <a>「お問い合わせ」のページ</a>
+              </Link>
               よりお気軽にご連絡ください。
             </p>
             <p>

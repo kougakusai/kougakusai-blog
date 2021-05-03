@@ -3,7 +3,7 @@ import matter from 'gray-matter';
 import Layout from '../../components/layout';
 import Head from 'next/head';
 import Link from 'next/link';
-import Icon from '../comonents/atoms/icon.js';
+import Icon from '../comonents/atoms/icon';
 import Title from '../comonents/organisms/title';
 
 const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';

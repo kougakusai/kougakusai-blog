@@ -2,7 +2,8 @@ import React from 'react';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import ReactMarkdown from 'react-markdown/with-html';
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import Head from 'next/head';
 
@@ -20,7 +21,11 @@ export default function Post({ content, frontmatter }) {
       </Head>
       <Layout>
         <article className="">
-          <ReactMarkdown escapeHtml={false} source={content} renderers={{ code: CodeBlock }} />
+          <ReactMarkdown
+            rehypePlugins={[rehypeRaw]}
+            children={content}
+            components={{ code: CodeBlock }}
+          />
         </article>
       </Layout>
     </div>
