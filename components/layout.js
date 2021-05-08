@@ -125,6 +125,13 @@ export default function Layout({ children }, props) {
                         お問い合わせ
                       </a>
                     </Link>
+                    <a
+                      className="text-gray-300 bg-k-pink hover:text-white px-3 py-2 rounded-md text-sm font-medium no-underline"
+                      href="https://kougakusai.jp/"
+                      target="_blank"
+                    >
+                      こうがく祭HPへ
+                    </a>
 
                     {/* <a
                       href="#"
@@ -142,7 +149,7 @@ export default function Layout({ children }, props) {
             <div className="px-2 pt-2 pb-3 space-y-1">
               <Link href="/">
                 <a
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium no-underline"
+                  className="text-white block px-3 py-2 rounded-md text-base font-medium no-underline"
                   aria-current="page"
                 >
                   記事一覧
@@ -150,15 +157,22 @@ export default function Layout({ children }, props) {
               </Link>
 
               <Link href="/about">
-                <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium no-underline">
+                <a className="text-white block px-3 py-2 rounded-md text-base font-medium no-underline">
                   このブログについて
                 </a>
               </Link>
               <Link href="/contact">
-                <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium no-underline">
+                <a className="text-gray-300 block px-3 py-2 rounded-md text-base font-medium no-underline">
                   お問い合わせ
                 </a>
               </Link>
+              <a
+                className="text-white bg-k-pink block px-3 py-2 w-1/3 rounded-md text-base font-medium no-underline"
+                href="https://kougakusai.jp/"
+                target="_blank"
+              >
+                こうがく祭HPへ
+              </a>
 
               {/* <a
                 href="#"

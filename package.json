@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
+    "postbuild": "next-sitemap",
     "lint": "eslint src/** --ext .ts,.tsx",
     "lint:fix": "eslint src/** --ext .ts,.tsx --fix",
     "prettier:quick": "pretty-quick --staged"
@@ -52,6 +53,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "gray-matter": "^4.0.3",
     "next-mdx-frontmatter": "0.0.3",
+    "next-sitemap": "^1.6.55",
     "postcss": "^8.2.13",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.2.1",

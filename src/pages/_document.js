@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
+import { existsGaId, GA_ID } from '../lib/gtag';
 // import { TypographyStyle } from 'react-typography';
 // import typography from '../utils/typography';
 const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
@@ -26,6 +27,26 @@ export default class MyDocument extends Document {
           <meta
             property="og:image"
             content=" https://kougakusai.github.io/kougakusai-blog/og.jpg"
+          />
+          {existsGaId && (
+            <>
+              <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${GA_ID}', {
+                    page_path: window.location.pathname,
+                  });`,
+                }}
+              />
+            </>
+          )}
+          <meta
+            name="google-site-verification"
+            content="4v8xJkHHz5Uy6B8qlEUjxezluzncc8HY-P4N8BVjZsI"
           />
         </Head>
         <body>
