@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://kougakusai.github.io/kougakusai-blog
+
+# Sitemaps
+Sitemap: https://kougakusai.github.io/kougakusai-blog/sitemap.xml
