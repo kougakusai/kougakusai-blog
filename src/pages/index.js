@@ -72,7 +72,13 @@ export async function getStaticProps() {
 
   return {
     props: {
-      posts,
+      posts: posts.sort((a, b) => {
+        if (a.frontmatter.date < b.frontmatter.date) {
+          return 1;
+        } else {
+          return -1;
+        }
+      }),
     },
   };
 }

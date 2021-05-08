@@ -4,7 +4,6 @@ import { MDXProvider } from '@mdx-js/react';
 import { Embed } from 'theme-ui';
 import Footer from 'src/comonents/organisms/footer';
 import React, { useState } from 'react';
-import pageLink from '../src/comonents/organisms/pageLink';
 
 const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
@@ -17,7 +16,7 @@ export default function Layout({ children }, props) {
     setMenu(!menu);
   };
 
-  const shortcodes = { pageLink };
+  const shortcodes = { Embed };
   const header = isRoot ? (
     <h1 className="mb-16">
       <Link href="/bloglist">

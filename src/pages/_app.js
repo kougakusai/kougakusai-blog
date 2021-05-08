@@ -1,10 +1,10 @@
 import 'src/styles/globals.css';
-
-// import type { AppProps } from 'next/app';
-import Head from 'next/head';
-
-import 'typeface-lato';
+import * as gtag from '../lib/gtag';
+import usePageView from '../hooks/usePageView';
+// import 'typeface-lato';
 
 export default function MyApp({ Component, pageProps }) {
+  usePageView();
+
   return <Component {...pageProps} />;
 }
