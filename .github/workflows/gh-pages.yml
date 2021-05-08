@@ -47,6 +47,9 @@ jobs:
         env:
           NEXT_PUBLIC_BASE_PATH: /kougakusai-blog
 
+      - name: postbuild
+        run: npm run postbuild
+
       # しかしGitHub Pagesの仕様として_から始まるディレクトリが見えず404となる
       # つまりHTMLからJSを読み込めない
       # これを回避するために.nojekyllファイルをoutディレクトリに作る
