@@ -5,6 +5,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Icon from '../comonents/atoms/icon';
 import Title from '../comonents/organisms/title';
+import TagLabel from 'src/comonents/atoms/taglabel';
 
 const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
@@ -18,7 +19,7 @@ export default function Home({ posts }) {
         <div>
           <Title title="記事一覧" />
           <hr className="mb-2"></hr>
-          {posts.map(({ frontmatter: { title, description, updatedAt }, slug }) => (
+          {posts.map(({ frontmatter: { title, description, updatedAt, tag }, slug }) => (
             <article key={slug}>
               <Link href="/post/[slug]" as={`/post/${slug}`}>
                 <div className="flex flex-row cursor-pointer justify-between">
@@ -32,6 +33,7 @@ export default function Home({ posts }) {
                     </header>
                     <section className="flex flex-row flex-nowrap mb-4 text-xl">
                       <p className="m-0 text-k-darkgray">{updatedAt}</p>
+                      <TagLabel tag={tag} />
                       {/* <p className="ml-8 m-0 text-k-pink">{description}</p> */}
                     </section>
                   </div>

@@ -8,6 +8,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import Head from 'next/head';
 
 import Layout from '../../../components/layout';
+import TagLabel from 'src/comonents/atoms/taglabel';
 
 const CodeBlock = ({ language, value }) => {
   return <SyntaxHighlighter language={language}>{value}</SyntaxHighlighter>;
@@ -21,6 +22,7 @@ export default function Post({ content, frontmatter }) {
       </Head>
       <Layout>
         <article className="">
+          <TagLabel tag={frontmatter.tag} />
           <ReactMarkdown
             rehypePlugins={[rehypeRaw]}
             children={content}
@@ -63,7 +65,7 @@ export async function getStaticProps({ params: { slug } }) {
   };
   return {
     props: {
-      content: `${data.updatedAt}\n\n## ${data.title}\n${content}`,
+      content: `${data.updatedAt}\n\n## ${data.title}\n\n${content}`,
       frontmatter,
     },
   };
